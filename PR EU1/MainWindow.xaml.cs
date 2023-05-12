@@ -27,9 +27,6 @@ namespace PR_EU1
 		}
 		private void AuthorClick(object sender, RoutedEventArgs e) => MessageBox.Show("top secret", "authors");
 		private void ExitClick(object sender, RoutedEventArgs e) => this.Close();
-		private void ShowStatus(object sender, MouseEventArgs e)
-		{
-			status.Text = sender.ToString();
-		}
+		private void ShowStatus(object sender, MouseEventArgs e) => status.Text = sender.ToString();
 	}
 }
