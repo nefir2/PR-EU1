@@ -1,0 +1,40 @@
+﻿<Window x:Class="PR_EU1.MainWindow" x:Name="mainwindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:PR_EU1"
+		mc:Ignorable="d"
+		Title="MainWindow" Height="450" Width="800">
+	<Grid>
+		<Menu Background="#01FFFFFF">
+			<MenuItem Header="_background color" MouseMove="ShowStatus">
+				<MenuItem Header="_green" Click="ColorChoose" x:Name="green"/>
+				<MenuItem Header="_blue" Click="ColorChoose" x:Name="blue"/>
+				<MenuItem Header="_red" Click="ColorChoose" x:Name="red"/>
+				<MenuItem Header="_white" Click="ColorChoose" x:Name="white"/>
+				<MenuItem Header="_black" Click="ColorChoose" x:Name="black"/>
+			</MenuItem>
+			<MenuItem Header="_about" MouseMove="ShowStatus">
+				<MenuItem Header="_author" Click="AuthorClick"/>
+				<MenuItem Header="_exit" Click="ExitClick"/>
+			</MenuItem>
+		</Menu>
+		<ToolBarTray Margin="10,46,390,199">
+			<ToolBar MouseMove="ShowStatus">
+				<Button Click="ColorChoose" Content="green"/>
+				<Button Click="ColorChoose" Content="blue"/>
+				<Button Click="ColorChoose" Content="red"/>
+				<Button Click="ColorChoose" Content="white"/>
+				<Button Click="ColorChoose" Content="black"/>
+			</ToolBar>
+			<ToolBar Margin="-181,32,163,-32" MouseMove="ShowStatus">
+				<Button Click="AuthorClick" Content="author"/>
+				<Button Click="ExitClick" Content="exit"/>
+			</ToolBar>
+		</ToolBarTray>
+		<StatusBar Background="#ffF1EDED" DockPanel.Dock="Bottom" Margin="0,384,0,0" MouseMove="ShowStatus">
+			<TextBlock x:Name="status" Text="asdasf"/>
+		</StatusBar>
+	</Grid>
+</Window>
